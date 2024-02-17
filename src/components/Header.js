@@ -10,8 +10,11 @@ const Header = () => {
     <div className='flex justify-between'>
       <h1 className='m-2 p-2'>SHOPPIE</h1>
       <div className='flex'>
-        <Link to="/" className='m-2 px-4 py-8 no-underline text-xl'>HOME</Link>
-        <p className='m-2 px-4 py-8 font-bold text-green-600 font-mono text-xl'>CART VALUE: $ {total}</p>
+        <Link to="/" className='m-2 px-2 py-8 no-underline text-xl'>HOME</Link>
+        <Link to="/products" className='m-2 px-2 py-8 no-underline text-xl'>PRODUCTS</Link>
+        <Link to="/about" className='m-2 px-2 py-8 no-underline text-xl'>ABOUT</Link>
+        <Link to="/contact" className='m-2 px-2 py-8 no-underline text-xl'>CONTACT</Link>
+        {/* <p className='m-2 px-4 py-8 font-bold text-green-600 font-mono text-xl'>CART VALUE: $ {total}</p> */}
         <Link to="/cart" className='p-3'><button className='text-3xl text-red-400 rounded-md m-2 py-2'>🛒{items.length}</button></Link>
       </div>
       

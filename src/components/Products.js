@@ -3,7 +3,7 @@ import Header from './Header'
 
 const Products = () => { 
   return (
-    <div>
+    <div className=''>
         <Header/>
         <Card/>     
     </div>

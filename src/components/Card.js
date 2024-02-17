@@ -23,17 +23,17 @@ function BasicExample() {
     const cards = allProducts.map(product => (
         <div className='col-md-2'>
             <Card className="m-2 p-2 w-45">
-            <Card.Img variant="top" src={product.image} className="w-[100px] h-[220px]"/>
+            <Card.Img variant="top" src={product.image} className="w-[150px] h-[150px]"/>
             <Card.Body>
-                <Card.Title className="overflow-hidden text-ellipsis text-nowrap">{product.title}</Card.Title>
+                <h6 className="overflow-hidden text-ellipsis text-nowrap">{product.title}</h6>
                     <Card.Text>$ {product.price}</Card.Text>
-                <Button className="m-2 p-2 w-30" variant="primary" onClick={()=>dispatch(addItem({id:product.id, name:product.title, price: product.price, title:product.title, image: product.image}))}>Add to Cart</Button>
+                <Button className="m-0 p-2 w-30" variant="primary" onClick={()=>dispatch(addItem({id:product.id, name:product.title, price: product.price, title:product.title, image: product.image}))}>Add to Cart</Button>
             </Card.Body>
             </Card>
         </div>
     ))
   return (
-    <div className='row'>
+    <div className='row p-5'>
         {cards}
     </div>
   );
