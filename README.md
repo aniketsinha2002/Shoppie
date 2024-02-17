@@ -1,6 +1,5 @@
 ## REDUX ARCHITECTURE
 
-![alt text](image.png)
+![alt text](image-1.png)
 
-
-DEMO VIDEO - https://www.loom.com/share/3f19ab8f41cd4031b00e46d3dbb3e92c?sid=030e0bce-b93d-46bb-8abc-c17a7d2fb48e
+DEMO VIDEO - https://www.loom.com/share/c9015c9054ff4c058820a499d286e385?sid=c02337f3-84c9-4b29-886f-cd3f8f9a26b7
