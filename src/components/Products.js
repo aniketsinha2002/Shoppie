@@ -1,13 +1,11 @@
-import Card from './Card';
-import Header from './Header'
+import Card from "./Card";
 
-const Products = () => { 
+const Products = () => {
   return (
-    <div className=''>
-        <Header/>
-        <Card/>     
+    <div className="overflow-x-hidden">
+      <Card />
     </div>
-  )
-}
+  );
+};
 
-export default Products
+export default Products;
