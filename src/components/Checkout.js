@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "./Header";
 import OrderSummary from "./OrderSummary";
 import { useSelector } from "react-redux";
@@ -7,6 +7,11 @@ import BillingForm from "./BillingForm";
 const Checkout = () => {
   const items = useSelector((state) => state.cart);
   const total = items.reduce((a, b) => a + b.price * b.quantity, 0); // Consider total quantity
+
+  useEffect(() => {
+    // Scroll to the top when the component mounts
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="bg-gray-50 min-h-screen">

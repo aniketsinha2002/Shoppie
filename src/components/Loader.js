@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const ShimmerLoader = () => {
+  useEffect(() => {
+    // Scroll to the top when the component mounts
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="p-5 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-4 overflow-x-hidden">
       {Array(10)

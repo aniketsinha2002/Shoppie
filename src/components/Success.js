@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Success = () => {
@@ -7,6 +7,12 @@ const Success = () => {
   const handleClick = () => {
     navigate("/");
   };
+
+  useEffect(() => {
+    // Scroll to the top when the component mounts
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <div className="flex flex-col items-center justify-center min-h-screen gap-4">

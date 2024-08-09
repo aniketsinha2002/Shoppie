@@ -1,5 +1,7 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import img1 from "../assets/images/img1.avif";
 import img2 from "../assets/images/img2.jpg";
 import img3 from "../assets/images/img3.webp";
@@ -7,13 +9,16 @@ import img4 from "../assets/images/img4.jpg";
 import img5 from "../assets/images/img5.avif";
 
 const Home = () => {
-  const navigate = useNavigate();
-
   const images = [img1, img2, img3, img4, img5];
 
-  const handleButtonClick = () => {
-    navigate("/products");
-  };
+  // const handleButtonClick = () => {
+  //   navigate("/products");
+  // };
+
+  useEffect(() => {
+    // Scroll to the top when the component mounts
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="bg-gray-50 overflow-x-hidden">
@@ -25,12 +30,11 @@ const Home = () => {
           Discover our exclusive designer pieces that embody sophistication and
           style.
         </h2>
-        <button
-          className="bg-black text-white px-6 py-2 rounded-lg"
-          onClick={handleButtonClick}
-        >
-          Discover More Products
-        </button>
+        <NavLink to="/products">
+          <button className="bg-black text-white px-6 py-2 rounded-lg">
+            Discover More Products
+          </button>
+        </NavLink>
       </div>
 
       {/* Image Sections */}

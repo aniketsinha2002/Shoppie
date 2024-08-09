@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const About = () => {
+  useEffect(() => {
+    // Scroll to the top when the component mounts
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="bg-gray-50 text-black min-h-screen tracking-wider overflow-x-hidden">
       <div className="container mx-auto px-4 py-12">
