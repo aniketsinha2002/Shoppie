@@ -2,12 +2,39 @@ import React, { useEffect, useState } from "react";
 import Loader from "./Loader";
 import { useDispatch } from "react-redux";
 import { addItem } from "../redux/slices/cartSlice";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { FaCheckCircle } from "react-icons/fa";
 
 function MyCard() {
   const dispatch = useDispatch();
   const [limit, setLimit] = useState(20);
   const [allProducts, setAllProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  function handleCartClick(product) {
+    dispatch(
+      addItem({
+        id: product.id,
+        title: product.title,
+        price: product.price,
+        image: product.thumbnail,
+      })
+    );
+    toast.success("Added to cart!", {
+      position: "top-right",
+      autoClose: 1500,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      icon: <FaCheckCircle color="green" />,
+      theme: "light",
+      className:
+        "fixed top-5 right-5 py-2 px-2 rounded-lg shadow-lg z-10 w-[185px] sm:w-auto ",
+    });
+  }
 
   useEffect(() => {
     setLoading(true);
@@ -57,16 +84,7 @@ function MyCard() {
           <p className="text-gray-700">${product.price.toFixed(2)}</p>
           <button
             className="bg-black text-white px-6 py-2 rounded-lg"
-            onClick={() =>
-              dispatch(
-                addItem({
-                  id: product.id,
-                  title: product.title,
-                  price: product.price,
-                  image: product.thumbnail,
-                })
-              )
-            }
+            onClick={() => handleCartClick(product)} // Pass function reference here
           >
             Add to Cart
           </button>
@@ -79,6 +97,7 @@ function MyCard() {
     <div className="row px-5">
       {cards}
       {loading && <Loader />}
+      <ToastContainer /> {/* Move ToastContainer here */}
     </div>
   );
 }

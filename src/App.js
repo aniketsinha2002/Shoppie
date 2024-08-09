@@ -13,7 +13,7 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="bg-gray-50">
+    <div className="bg-gray-50 m-0 p-0">
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

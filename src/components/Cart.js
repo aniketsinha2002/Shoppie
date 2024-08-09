@@ -25,14 +25,14 @@ const Cart = () => {
   const total = items.reduce((a, b) => a + b.price * b.quantity, 0);
 
   return (
-    <div className="bg-gray-50 min-h-screen py-4 overflow-x-hidden ">
+    <div className="bg-gray-50 min-h-screen overflow-x-hidden ">
       {items.length === 0 ? (
         <CartEmpty />
       ) : (
         <div>
-          <div className="container mx-auto px-4 py-8 ">
-            <div className="grid grid-cols-1 md:grid-cols-3">
-              <div className="md:col-span-2 space-y-4">
+          <div className="container px-4 py-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 ">
+              <div className=" left-3 relative space-y-4 mb-8">
                 {items.map((product) => (
                   <Card
                     key={product.id}
@@ -68,7 +68,7 @@ const Cart = () => {
                           </button>
                         </div>
                         <button
-                          className="bg-black text-white px-4 py-1 rounded-lg"
+                          className="bg-black text-white px-3 py-2 rounded-lg"
                           onClick={() => removeFromCart(product.id)}
                         >
                           Remove
@@ -78,7 +78,9 @@ const Cart = () => {
                   </Card>
                 ))}
               </div>
-              <OrderSummary items={items} total={total} link="/checkout" />
+              <div>
+                <OrderSummary items={items} total={total} link="/checkout" />
+              </div>
             </div>
           </div>
         </div>
