@@ -8,6 +8,6 @@ NEW WEBSITE LINK - https://shoppiev2.netlify.app/
 ![alt text](image-1.png)
 PREVIOUS WEBSITE LINK - https://shoppie-aniket.netlify.app/
 
-DEMO VIDEO (NEW) - https://www.loom.com/share/cd55b1e84ce64d8d8b2457ee7f9c4897?sid=044f9b4a-5542-45d0-a055-1843f10ef78d
+DEMO VIDEO (NEW) - https://www.loom.com/share/a3a114d296b149baafbd61fdbf40d1b1?sid=c62ee37d-0b05-44b0-8ac4-8f28e30c23b9
 
 DEMO VIDEO (OLD)- https://www.loom.com/share/c9015c9054ff4c058820a499d286e385?sid=c02337f3-84c9-4b29-886f-cd3f8f9a26b7
