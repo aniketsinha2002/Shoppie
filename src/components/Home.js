@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 const Home = () => {
@@ -14,11 +13,6 @@ const Home = () => {
 
   // full image URLs
   const images = imageNames.map((name) => `${baseUrl}${name}`);
-
-  useEffect(() => {
-    // Scroll to the top when the component mounts
-    window.scrollTo(0, 0);
-  }, []);
 
   return (
     <div className="bg-gray-50 overflow-x-hidden">

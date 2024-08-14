@@ -13,7 +13,7 @@ const Header = () => {
     setIsOpen(!isOpen);
   };
 
-  // Closing the menu when clicking outside
+  // Close the menu when clicking outside of it
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -21,11 +21,11 @@ const Header = () => {
       }
     };
 
-    // Event listener to detect clicks outside the menu
+    // Add event listener to detect clicks outside the menu
     document.addEventListener("mousedown", handleClickOutside);
 
     return () => {
-      // Removing Event listener on unmount
+      // Remove event listener on unmount
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
@@ -56,7 +56,7 @@ const Header = () => {
         <h1 className="font-normal text-[19px] tracking-widest">Shoppie</h1>
       </NavLink>
 
-      <div className="flex flex-row ">
+      <div className="flex flex-row">
         <div className="md:hidden flex items-center">
           <button onClick={toggleMenu} className="text-black text-[15px]">
             {isOpen ? <FaTimes /> : <FaEllipsisV />}
@@ -66,10 +66,9 @@ const Header = () => {
         <div
           ref={menuRef}
           className={`${
-            isOpen ? "block" : "hidden"
-          } md:flex md:items-center absolute md:relative top-10 md:top-0 left-0 w-full md:w-auto bg-gray-50 md:bg-transparent shadow-md md:shadow-none border-t md:border-none border-gray-300 md:border-0 z-10`}
+            isOpen ? "block " : "hidden"
+          } md:flex md:items-center absolute md:relative left-4 top-7 md:top-0 ml-2 w-60 md:w-auto bg-gray-50 z-10 overflow-hidden `}
         >
-          {/* Home Products About Contact */}
           {navLinks.map(({ to, label }) => (
             <NavLink
               key={to}
