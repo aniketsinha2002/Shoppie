@@ -5,7 +5,7 @@ import { FaEllipsisV, FaTimes } from "react-icons/fa";
 import { BsCartCheck } from "react-icons/bs";
 
 const Header = () => {
-  const items = useSelector((state) => state.cart);
+  const items = useSelector((state) => state.cart.items);
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
 

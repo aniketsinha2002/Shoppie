@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { clearCart } from "../redux/slices/cartSlice";
 
 const BillingForm = () => {
   const [formData, setFormData] = useState({
@@ -12,6 +14,7 @@ const BillingForm = () => {
 
   const [errors, setErrors] = useState({});
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -32,7 +35,8 @@ const BillingForm = () => {
 
     if (Object.keys(newErrors).length === 0) {
       console.log("Form submitted successfully", formData);
-      navigate("/success");
+      dispatch(clearCart()); // Clear the cart
+      navigate("/success"); // Navigate to the success page
     }
   };
 

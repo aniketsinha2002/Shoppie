@@ -1,15 +1,8 @@
-import Card from "./Card";
-import { useEffect } from "react";
-
+import Cards from "./Cards";
 const Products = () => {
-  useEffect(() => {
-    // Scroll to the top when the component mounts
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
-    <div className="overflow-x-hidden">
-      <Card />
+    <div className="">
+      <Cards />
     </div>
   );
 };

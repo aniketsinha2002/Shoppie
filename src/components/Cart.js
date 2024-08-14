@@ -2,12 +2,11 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import { useSelector, useDispatch } from "react-redux";
 import { deleteItem, updateQuantity } from "../redux/slices/cartSlice";
-import Header from "./Header";
 import CartEmpty from "./CartEmpty";
-import OrderSummary from "./OrderSummary"; // Import the new component
+import OrderSummary from "./OrderSummary";
 
 const Cart = () => {
-  const items = useSelector((state) => state.cart);
+  const items = useSelector((state) => state.cart.items);
   const dispatch = useDispatch();
 
   const removeFromCart = (id) => {
@@ -42,10 +41,10 @@ const Cart = () => {
                     <Card.Img
                       variant="top"
                       src={product.image}
-                      className="h-28 w-28 object-cover grayscale"
+                      className="h-40 w-80 object-cover shadow-sm"
                     />
-                    <div className="ml-4 flex flex-col justify-between w-full">
-                      <h6 className="text-black font-semibold text-lg">
+                    <div className="flex flex-col justify-between w-full text-center">
+                      <h6 className="text-black font-light mt-2">
                         {product.title}
                       </h6>
                       <div className="flex items-center justify-between">
