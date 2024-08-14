@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom";
 
 const Home = () => {
-  //hosting static images for better load time
   const baseUrl = "https://shoppie-img.static.domains/";
   const imageNames = [
     "img1.jpg",
@@ -10,17 +9,15 @@ const Home = () => {
     "img4.jpg",
     "img5.jpg",
   ];
-
-  // full image URLs
   const images = imageNames.map((name) => `${baseUrl}${name}`);
 
   return (
     <div className="bg-gray-50 overflow-x-hidden">
-      <div className="flex flex-col items-center justify-center text-center py-20">
-        <h1 className="px-2 text-4xl md:text-7xl font-thin text-black mb-4 uppercase -tracking-tighter">
+      <div className="flex flex-col items-center justify-center text-center py-20 px-2">
+        <h1 className="text-4xl md:text-7xl font-thin text-black mb-4 uppercase -tracking-tighter">
           Experience the Height of Fashion
         </h1>
-        <h2 className="text-lg md:text-2xl font-extralight text-gray-600 mb-8 tracking-wider px-2">
+        <h2 className="text-lg md:text-2xl font-extralight text-gray-600 mb-8 tracking-wider">
           Discover our exclusive designer pieces that embody sophistication and
           style.
         </h2>
@@ -31,7 +28,6 @@ const Home = () => {
         </NavLink>
       </div>
 
-      {/* Image Sections */}
       <div className="flex flex-wrap justify-center">
         {images.map((img, index) => (
           <div

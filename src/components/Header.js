@@ -67,7 +67,7 @@ const Header = () => {
           ref={menuRef}
           className={`${
             isOpen ? "block " : "hidden"
-          } md:flex md:items-center absolute md:relative left-4 top-7 md:top-0 ml-2 w-60 md:w-auto bg-gray-50 z-10 overflow-hidden `}
+          } md:flex md:items-center absolute md:relative left-5 top-7 md:top-0 ml-2 w-60 md:w-auto bg-gray-50 z-10 overflow-hidden `}
         >
           {navLinks.map(({ to, label }) => (
             <NavLink

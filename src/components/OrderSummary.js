@@ -1,8 +1,7 @@
-// OrderSummary.js
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { applyDiscount } from "../redux/slices/cartSlice"; // Adjust the path
+import { applyDiscount } from "../redux/slices/cartSlice";
 import Discount from "./Discount";
 
 const OrderSummary = ({ items, total, link }) => {
@@ -10,7 +9,6 @@ const OrderSummary = ({ items, total, link }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  // Check local storage on component mount
   useEffect(() => {
     const discountStatus = localStorage.getItem("discountApplied");
     if (discountStatus === "true") {
@@ -26,18 +24,17 @@ const OrderSummary = ({ items, total, link }) => {
     if (!isDiscountApplied) {
       setIsDiscountApplied(true);
       dispatch(applyDiscount(0.1)); // Apply a 10% discount
-      localStorage.setItem("discountApplied", "true"); // Store status in local storage
+      localStorage.setItem("discountApplied", "true");
     }
   };
 
-  const discountAmount = total * 0.1; // 10% discount
-  const finalTotal = total + 30 - discountAmount; // Total after discount and shipping
+  const discountAmount = total * 0.1;
+  const finalTotal = total + 30 - discountAmount;
 
   return (
     <div className="rounded-lg px-4 md:px-6">
       <h3 className="text-4xl font-semibold mb-4">Order Summary</h3>
 
-      {/* Green Banner for Discount */}
       {isDiscountApplied && <Discount />}
 
       <div className="mb-2 text-lg">
@@ -60,7 +57,7 @@ const OrderSummary = ({ items, total, link }) => {
       <div className="flex flex-col w-40">
         {!isDiscountApplied && (
           <button
-            className="bg-green-500 border-2 border-green-700 hover:bg-green-400 text-white px-4 py-1 rounded-lg text-sm w-30"
+            className="bg-green-500 border-2 border-green-700 hover:bg-green-400 text-white px-4 py-1 rounded-lg text-sm"
             onClick={handleDiscountClick}
           >
             Apply 10% Off
