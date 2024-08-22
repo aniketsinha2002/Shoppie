@@ -1,53 +1,29 @@
 import { NavLink } from "react-router-dom";
-
+import bg from "./utils/images/img3.png";
+import Slider from "./Slider";
 const Home = () => {
-  const baseUrl = "https://shoppie-img.static.domains/";
-  const imageNames = [
-    "img1.jpg",
-    "img2.jpg",
-    "img3.png",
-    "img4.jpg",
-    "img5.jpg",
-  ];
-  const images = imageNames.map((name) => `${baseUrl}${name}`);
-
   return (
-    <div className="bg-gray-50 overflow-x-hidden">
-      <div className="flex flex-col items-center justify-center text-center py-20 px-2">
-        <h1 className="text-4xl md:text-7xl font-thin text-black mb-4 uppercase -tracking-tighter">
-          Experience the Height of Fashion
+    <div className="overflow-x-hidden flex flex-col items-center justify-center relative h-screen">
+      {/* Background Image */}
+      <div className="absolute top-0 left-[100px] md:top-25 md:left-[200px] w-[180px] h-60 lg:w-[240px] lg:h-80 ">
+        <img src={bg} className="" alt="Background" />
+      </div>
+
+      {/* Hero Section */}
+      <div className="relative text-center py-20 px-4 max-w-3xl mx-auto">
+        <h1 className="text-4xl md:text-6xl font-bold text-black mb-4 uppercase tracking-tight">
+          Uncover Top <span className="text-[#292929ca]">Trends</span> Across
+          All Categories
         </h1>
-        <h2 className="text-lg md:text-2xl font-extralight text-gray-600 mb-8 tracking-wider">
-          Discover our exclusive designer pieces that embody sophistication and
-          style.
+        <h2 className="text-lg md:text-2xl font-light text-gray-800 mb-8">
+          Explore Exclusive Picks and Essentials Tailored for You
         </h2>
         <NavLink to="/products">
-          <button className="bg-black text-white px-6 py-2 rounded-lg">
+          <button className="bg-black text-white px-8 py-3 rounded-lg shadow-lg hover:bg-gray-800 transition">
             Discover More Products
           </button>
         </NavLink>
-      </div>
-
-      <div className="flex flex-wrap justify-center">
-        {images.map((img, index) => (
-          <div
-            key={index}
-            className={`w-full md:w-1/2 p-4 ${
-              index % 2 === 0 ? "text-left" : "text-right"
-            }`}
-          >
-            <img
-              src={img}
-              alt="fashion model"
-              className="w-full h-auto rounded-lg mb-4"
-            />
-            <p className="text-lg md:text-xl text-gray-800">
-              {index % 2 === 0
-                ? "Our designs reflect your personality."
-                : "Fashion that speaks your language."}
-            </p>
-          </div>
-        ))}
+        {/* <Slider /> */}
       </div>
     </div>
   );

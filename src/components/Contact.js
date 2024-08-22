@@ -1,6 +1,6 @@
 const Contact = () => {
   return (
-    <div className="bg-gray-50 text-black min-h-screen overflow-x-hidden">
+    <div className=" text-black min-h-screen overflow-x-hidden">
       <div className="container mx-auto px-4 py-12">
         <h1 className="text-4xl font-semibold mb-6">Contact Us</h1>
         <p className="text-lg leading-relaxed mb-8">

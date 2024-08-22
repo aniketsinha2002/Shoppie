@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import cartGif from "./utils/images/cartgif.gif";
 
 const CartEmpty = () => {
-  const cartGif = "https://shoppie-img.static.domains/cartgif.gif";
+  // const cartGif = "https://shoppie-img.static.domains/cartgif.gif";
 
   return (
     <div className="container mx-auto flex flex-col items-center justify-center p-2">
