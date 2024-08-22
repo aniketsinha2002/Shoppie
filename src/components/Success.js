@@ -8,7 +8,7 @@ const Success = () => {
       <img
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Eo_circle_green_white_checkmark.svg/2048px-Eo_circle_green_white_checkmark.svg.png"
         alt="green tick"
-        className="w-20 h-20 "
+        className="w-20 h-20"
       />
       <h1 className="text-xl tracking-wide font-bold">
         Order Placed Successfully!
