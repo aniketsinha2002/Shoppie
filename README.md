@@ -1,6 +1,5 @@
 ## NEW UPDATE (v2)
 
-![New Version](https://shoppie-img.static.domains/image-2.png)  
 **[New Website Link](https://shoppiev2.netlify.app/)**
 
 ## PREVIOUS BASIC VERSION
@@ -15,5 +14,4 @@
 
 ## APP PERFORMANCE ANALYSIS
 
-[Performance Analysis Link](https://pagespeed.web.dev/analysis/https-shoppiev2-netlify-app/p39fs2twix?form_factor=desktop)  
-![Performance Analysis](https://shoppie-img.static.domains/image-3.png)
+[Performance Analysis Link](https://pagespeed.web.dev/analysis/https-shoppiev2-netlify-app/p39fs2twix?form_factor=desktop)
