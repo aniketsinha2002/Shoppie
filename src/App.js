@@ -10,10 +10,11 @@ import Checkout from "./components/Checkout";
 import Success from "./components/Success";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Favourites from "./components/Favourites";
 
 function App() {
   return (
-    <div className="bg-gray-50 m-0 p-0 font-sans">
+    <div className="bg-gray-50 m-0 p-0">
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -23,6 +24,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/success" element={<Success />} />
+        <Route path="/favourites" element={<Favourites />} />
       </Routes>
       <Footer />
     </div>
